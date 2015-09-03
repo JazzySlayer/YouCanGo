@@ -31,7 +31,7 @@ class DashboardController {
         println "4"
         def memberList = searchAllTeacher();
         println "5"
-        render(template: "dashboardAfterChange", model: [userInfo: info, memberList: memberList])
+        model: [userInfoStatus: info]
 
     }
 
