@@ -12,6 +12,7 @@ class User {
     static constraints = {
         username blank: false, unique: true,nullable: false
         password blank: false,nullable: false
+
     }
 
     def beforeInsert() {

@@ -2,13 +2,15 @@
 
 
 
+%{--
 <div class="fieldcontain ${hasErrors(bean: memberInstance, field: 'memberId', 'error')} ">
     <label for="memberId">
         <g:message code="member.memberId.label" default="Member Id"/>
 
     </label>
-    <g:textField name="memberId" value="${memberInstance?.memberId}"/>
-</div>
+--}%
+    <g:hiddenField name="memberId" value="${memberInstance?.memberId}"/>
+%{--</div>--}%
 
 <div class="fieldcontain ${hasErrors(bean: memberInstance, field: 'firstName', 'error')} required">
     <label for="firstName">
@@ -61,13 +63,13 @@
     <g:checkBox name="isMember" value="${memberInstance?.isMember}"/>
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: memberInstance, field: 'fullName', 'error')} ">
+%{--<div class="fieldcontain ${hasErrors(bean: memberInstance, field: 'fullName', 'error')} ">
     <label for="fullName">
         <g:message code="member.fullName.label" default="Full Name"/>
 
-    </label>
-    <g:textField name="fullName" value="${memberInstance?.fullName}"/>
-</div>
+    </label>--}%
+    <g:hiddenField name="fullName" value="${memberInstance?.fullName}"/>
+%{--</div>--}%
 
 <div class="fieldcontain ${hasErrors(bean: memberInstance, field: 'role', 'error')} required">
     <label for="role">
