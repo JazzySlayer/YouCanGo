@@ -1,7 +1,6 @@
 package youcango
 
 class Member {
-    String memberId
     String firstName
     String lastName
     String middleName
@@ -14,9 +13,9 @@ class Member {
 
     String toString(){
         if (middleName!=null){
-            return firstName+" "+middleName+" "+lastName+"-"+memberId
+            return firstName+" "+middleName+" "+lastName
         }else{
-            return firstName+" "+lastName+"-"+memberId
+            return firstName+" "+lastName
         }
     }
     String getFullName(){
@@ -27,8 +26,9 @@ class Member {
         }
     }
 
+
+
     static constraints = {
-        memberId(nullable:true)
         firstName(blank:false,matches: "[a-zA-Z ]+",nullable: false)
         lastName(blank:false,matches: "[a-zA-Z-. ]+",nullable: false)
         middleName(blank:true,matches: "[a-zA-Z-. ]+",nullable: true)

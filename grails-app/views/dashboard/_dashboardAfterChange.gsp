@@ -1,6 +1,5 @@
 <%@ page contentType="text/html;charset=UTF-8" %>
 <table class="info-giver">
-    <table>
         <g:each in="${memberList}" var="members">
             <tr>
                 <td>
@@ -10,5 +9,4 @@
                 </td>
             </tr>
         </g:each>
-    </table>
 </table>
